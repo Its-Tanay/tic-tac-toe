@@ -90,43 +90,39 @@ const gameplay = (() => {
     const computer2 = createPlayer("Computer", "O");
   
     const p1element = document.getElementById("player01");
-    p1element.addEventListener("click", () => {
-
-        if (currentPlayer === null){
+        p1element.addEventListener("click", () => {
+        if (currentPlayer === null) {
             currentPlayer = player1;
-        } 
-        else if (currentPlayer !== null){
+        } else if (currentPlayer !== null) {
             toswitchPlayer = player1;
         }
         p1element.classList.add("active1");
+        p2element.disabled = false;
+        c2element.disabled = false;
     });
   
     const p2element = document.getElementById("player02");
-    p2element.addEventListener("click", () => {
-
-        if (currentPlayer === null){
+        p2element.disabled = true;
+        p2element.addEventListener("click", () => {
+        if (currentPlayer === null) {
             currentPlayer = player2;
-            c2element.disabled = true;
-        }
-        else if (currentPlayer !== null){
+        } else if (currentPlayer !== null) {
             toswitchPlayer = player2;
-            c2element.disabled = true;
         }
         p2element.classList.add("active2");
+        c2element.disabled = false;
     });
   
     const c2element = document.getElementById("computer02");
-    c2element.addEventListener("click", () => {
-
-        if (currentPlayer === null){
+        c2element.disabled = true;
+        c2element.addEventListener("click", () => {
+        if (currentPlayer === null) {
             currentPlayer = computer2;
-            p2element.disabled = true;
-        } 
-        else if (currentPlayer !== null){
+        } else if (currentPlayer !== null) {
             toswitchPlayer = computer2;
-            p2element.disabled = true;
         }
         c2element.classList.add("active2");
+        p2element.disabled = false;
     });
   
     const getCurrentPlayer = () => currentPlayer;
