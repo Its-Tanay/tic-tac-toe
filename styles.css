@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Indie+Flower&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  padding: 0;
+}
+
+.header{
+  font-family: 'Bungee Shade', cursive;
+  font-size: 2rem;
+  position: absolute;
+  top: 7.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+}
+
+#tic{
+  color: #BAD7E9;
+}
+
+#tac{
+  color: #FCFFE7;
+}
+
+#toe{
+  color: #EB455F;
+}
+
+.container{
+    display: flex;
+    background-color: #2B3467;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#play-text{
+  color: #FCFFE7;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+
+#play{
+  color: #EB455F;
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 3.5rem;
+}
+
+.selection-pane{
+  height: 40%;
+  width: 50%;
+  font-size: 2rem;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 30% 50% 20%;
+  font-family: 'Jockey One', sans-serif;
+  margin-top: 10rem;
+}
+
+.selection-pane > #selection-header{
+  color: #FCFFE7;
+  letter-spacing: 0.4rem;
+}
+
+.selection-pane > .selection-btns{
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  justify-items: center;
+  align-items: center;
+}
+
+.selection{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.selection > button{
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #FCFFE7;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #FCFFE7;
+  font-size: 1.3rem;
+  font-family: 'Jockey One', sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+}
+
+.selection > button:hover{
+  background-color: #FCFFE7;
+  color: #2B3467;
+}
+
+.selection > .active1{
+  border: 5px solid #BAD7E9;
+}
+
+.selection > .active2{
+  border: 5px solid #EB455F;
+}
+
+#vs{
+  color: #FCFFE7;
+  font-size: 2rem;
+  font-family: 'Jockey One', sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+.start-btn{
+  margin-top: 3rem;
+}
+.start-btn > button{
+  position: relative;
+  appearance: none;
+  background-color: #EB455F;
+  border: none;
+  color: #FCFFE7;
+  padding: 1rem;
+  border: 2px solid #FCFFE7;
+  border-radius: 20px;
+  font-family: 'Jockey One', sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.start-btn > button:hover{
+  background-color: #FCFFE7;
+  color: #EB455F;
+}
+
+.game-board{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 10rem;
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 40vh;
+  width: 40vh;
+  border: none;
+  font-family: 'Bungee Shade', cursive;
+  font-family: 'Indie Flower', cursive;
+}
+
+.box{
+  border: 5px solid #FCFFE7;
+  text-align: center;
+}
+
+.marker-text-o{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  color: #EB455F;
+  font-size: 4rem;
+}
+
+.marker-text-x{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  color: #BAD7E9;
+  font-size: 4rem;
+}
+
+.box:nth-child(-n+3) {
+  border-top: none;
+}
+
+.box:nth-child(3n+1) {
+  border-left: none;
+}
+
+.box:nth-child(3n+3) {
+  border-right: none;
+}
+
+.box:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+.game-board > div > button{
+  appearance: none;
+  background-color: transparent;
+  border: 4px solid #EB455F;
+  border-radius: 20px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #FCFFE7;
+  cursor: pointer;
+  font-family: 'Jockey One', sans-serif;
+}
+
+.game-board > div > button:hover{
+  background-color: #FCFFE7;
+  color: #EB455F;
+  border: 4px solid #FCFFE7;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Jockey One', sans-serif;
+  font-size: 1rem;
+  color: #FCFFE7;
+  letter-spacing: 0.2rem;
+  font-family: 'roboto', sans-serif;
+}
+
+footer .link{
+  color: #EB455F;
+  text-decoration: none;
+}
+
+#text{
+  color: #FCFFE7;
+  font-family: 'Jockey One', sans-serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+  letter-spacing: 0.2rem;
+}

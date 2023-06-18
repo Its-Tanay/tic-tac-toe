@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Let's Play!</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1><span id="tic">Tic</span> <span id="tac">Tac</span> <span id="toe">Toe</span></h1>
+        </div>
+
+        <div class="play-btn">
+            <span id="play-text">
+                Let's play the game! 
+                <button id="play">►</span></button>
+            </span>
+        </div>
+
+    <div class="selection-pane" style="display: none";>
+
+        <h2 id="selection-header">Select Players</h2>
+
+        <div class="selection-btns">
+
+            <div class="selection">
+                <button id="player01" class="select">Human 1</button>
+            </div>
+
+            <span id="vs">VS</span>
+
+            <div class="selection">
+                <button id="player02" class="select">Human 2</button>
+                <button id="computer02" class="select">Computer</button>
+            </div>
+
+        </div>
+
+        <div class="start-btn">
+            <button id="startgame">Start Game</button>
+        </div>
+
+    </div>
+
+        <div class="game-board">
+
+            <div class="board" style="display: none;">
+                <div class="box" id="0"></div>
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+
+            <div class="result">
+                <h2 id="text" style="display: none;"></h2>
+            </div>
+
+            <div class="reset-btn">
+                <button id="reset" style="display: none;">Reset & Play again</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>Created by <a class="link" href="https://github.com/Its-Tanay">@Its-Tanay</a></p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
